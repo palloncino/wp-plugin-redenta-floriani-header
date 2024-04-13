@@ -18,7 +18,7 @@ add_action('wp_enqueue_scripts', 'header_strigno_scripts');
 // Shortcode function to output HTML
 function header_strigno_shortcode() {
     // Output the specified HTML
-    return '<div class="hero-container hero-container-400">
+    return '<div class="hero-container">
                 <div class="hero-text-container hero-text-container-show">
                     <div class="text-wrapper">
                         <h1 class="main-title">APSP Strigno</h1>

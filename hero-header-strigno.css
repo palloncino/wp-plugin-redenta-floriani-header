@@ -1,11 +1,10 @@
 .hero-container {
   position: relative;
-  height: 560px; /* Adjust height as needed */
-  background: url("http://apsppieve.chebellagiornata.it/wp-content/uploads/2024/03/cover.jpeg");
+  height: 300px;
+  background: url("http://apspstrigno.chebellagiornata.it/wp-content/uploads/2024/04/strigno-header-01.jpg");
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
-  border-bottom: 4px solid #306bac;
 }
 
 .hero-image {
@@ -16,9 +15,9 @@
 
 .hero-text-container {
   position: absolute;
-  top: 200px; /* Adjust based on your layout */
+  top: 20px;
   width: 100%;
-  display: block; /* Ensures it is visible, override if .hero-text-container has display:none */
+  display: block;
 }
 
 .text-wrapper {
