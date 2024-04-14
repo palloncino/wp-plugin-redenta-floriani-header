@@ -7,20 +7,20 @@
   background-size: cover;
 }
 
-.hero-image {
+.hero-container .hero-image {
   width: 100%;
   height: 100%;
   object-fit: cover;
 }
 
-.hero-text-container {
+.hero-container .hero-text-container {
   position: absolute;
-  top: 20px;
+  bottom: 20px;
   width: 100%;
   display: block;
 }
 
-.text-wrapper {
+.hero-container .text-wrapper {
   max-width: 1250px;
   margin: 0 auto;
   display: flex;
@@ -29,9 +29,9 @@
   justify-content: flex-start;
 }
 
-.main-title,
-.sub-title,
-.sub-title-2 {
+.hero-container .main-title,
+.hero-container .sub-title,
+.hero-container .sub-title-2 {
   color: white !important;
   margin: 0 !important;
   padding: 0.2rem 0.8rem !important;
@@ -40,36 +40,36 @@
     2px 2px 0 #1e305080;
 }
 
-.main-title {
+.hero-container .main-title {
   font-size: 4rem !important;
   line-height: 4rem !important;
 }
 
-.sub-title {
+.hero-container .sub-title {
   font-size: 2rem !important;
 }
 
-.sub-title-2 {
+.hero-container .sub-title-2 {
   font-size: 1.2rem !important;
 }
 
 /* Responsive adjustments */
 @media only screen and (max-width: 1024px) {
-  .hero-container {
+  .hero-container .hero-container {
     height: 300px;
   }
 
-  .main-title {
+  .hero-container .main-title {
     font-size: 2rem !important;
   }
 
-  .sub-title {
+  .hero-container .sub-title {
     font-size: 1rem !important;
   }
 }
 
 @media only screen and (max-width: 600px) {
-  .hero-text-container .main-title {
+  .hero-container .hero-text-container .main-title {
     line-height: 2rem !important;
   }
 }
