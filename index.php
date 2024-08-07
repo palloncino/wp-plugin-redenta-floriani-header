@@ -2,7 +2,7 @@
 /*
 Plugin Name: Strigno Header
 Description: Provides the Header through a shortcode.
-Version: 1.0
+Version: 1.1
 Author: Antonio Guiotto
 */
 
@@ -16,9 +16,17 @@ function header_strigno_scripts() {
 add_action('wp_enqueue_scripts', 'header_strigno_scripts');
 
 // Shortcode function to output HTML
-function header_strigno_shortcode() {
+function header_strigno_shortcode($atts) {
+    // Extract shortcode attributes
+    $atts = shortcode_atts(array(
+        'bg_url' => ''
+    ), $atts, 'strigno_header');
+
+    // Determine background style
+    $bg_style = $atts['bg_url'] ? 'style="background: url(' . esc_url($atts['bg_url']) . ') no-repeat center center; background-size: cover;"' : '';
+
     // Output the specified HTML
-    return '<div class="hero-container">
+    return '<div class="hero-container" ' . $bg_style . '>
                 <div class="hero-text-container hero-text-container-show">
                     <div class="text-wrapper">
                         <h1 class="main-title">APSP Strigno</h1>
@@ -29,4 +37,4 @@ function header_strigno_shortcode() {
             </div>';
 }
 add_shortcode('strigno_header', 'header_strigno_shortcode');
-?>
+
