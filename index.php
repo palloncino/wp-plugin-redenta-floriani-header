@@ -30,7 +30,7 @@ function header_strigno_shortcode($atts) {
                 <div class="hero-text-container hero-text-container-show">
                     <div class="text-wrapper">
                         <h1 class="main-title">APSP Redenta Floriani</h1>
-                        <h6 class="sub-title-3">Strigno (TN)</h3>
+                        <h3 class="sub-title">Strigno (TN)</h3>
                     </div>
                 </div>
             </div>';
