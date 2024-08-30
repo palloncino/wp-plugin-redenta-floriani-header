@@ -29,9 +29,8 @@ function header_strigno_shortcode($atts) {
     return '<div class="hero-container" ' . $bg_style . '>
                 <div class="hero-text-container hero-text-container-show">
                     <div class="text-wrapper">
-                        <h1 class="main-title">APSP Strigno</h1>
-                        <h3 class="sub-title">Redenta Floriani</h3>
-                        <h6 class="sub-title-2">Strigno (TN)</h6>
+                        <h1 class="main-title">APSP Redenta Floriani</h1>
+                        <h6 class="sub-title-3">Strigno (TN)</h3>
                     </div>
                 </div>
             </div>';
