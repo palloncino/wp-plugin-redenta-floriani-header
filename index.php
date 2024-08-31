@@ -1,6 +1,6 @@
 <?php
 /*
-Plugin Name: Strigno Header
+Plugin Name: Redenta Floriani (Strigno) Header
 Description: Provides the Header through a shortcode.
 Version: 1.1
 Author: Antonio Guiotto
@@ -22,8 +22,19 @@ function header_strigno_shortcode($atts) {
         'bg_url' => ''
     ), $atts, 'strigno_header');
 
+    // Check if the URL contains "amministrazione-trasparente"
+    if (strpos($_SERVER['REQUEST_URI'], 'amministrazione-trasparente') !== false) {
+        $bg_url = 'http://apspstrigno.chebellagiornata.it/wp-content/uploads/2024/08/AlboAPSPCesareBenedetti1.jpg';
+    } else {
+        // Use the original bg_url logic
+        $bg_url = get_field('bg_url', 'option');
+        if (empty($bg_url)) {
+            $bg_url = get_template_directory_uri() . '/assets/img/bg.jpg';
+        }
+    }
+
     // Determine background style
-    $bg_style = $atts['bg_url'] ? 'style="background: url(' . esc_url($atts['bg_url']) . ') no-repeat center center; background-size: cover;"' : '';
+    $bg_style = $bg_url ? 'style="background: url(' . esc_url($bg_url) . ') no-repeat center center; background-size: cover;"' : '';
 
     // Output the specified HTML
     return '<div class="hero-container" ' . $bg_style . '>
